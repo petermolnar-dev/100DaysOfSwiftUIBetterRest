@@ -17,6 +17,7 @@ struct ContentView: View {
     @State private var showingAlert = false
     
     var body: some View {
+        NavigationView {
         VStack {
             Text("When do you want to wake up?")
                 .font(.headline)
@@ -50,7 +51,8 @@ struct ContentView: View {
                 Text("Calculate")
             }
         )
-    
+        }
+        .edgesIgnoringSafeArea(.all)
     }
     
     func calculateBedtime() {
